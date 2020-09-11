@@ -16,9 +16,9 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: finwo/adminer
         tag_with_ref: true
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-    - name: Deploy webhook
-      run: 'curl -X POST --header "Authorization: Bearer ${{ secrets.SWARMPIT_TOKEN }}" --header "Content-Type: application/json" --header "Accept: application/json" "https://swarmpit.finwo.net/api/stacks/adminer/redeploy"'
+  # deploy:
+    # runs-on: ubuntu-latest
+    # needs: build
+    # steps:
+    # - name: Deploy webhook
+      # run: 'curl -X POST --header "Authorization: Bearer ${{ secrets.SWARMPIT_TOKEN }}" --header "Content-Type: application/json" --header "Accept: application/json" "https://swarmpit.finwo.net/api/stacks/adminer/redeploy"'
