@@ -3,7 +3,8 @@ FROM adminer:4.8.1
 USER root
 
 RUN apk update
-RUN apk add build-base php7-dev
+
+RUN apk add build-base php7-dev mongo-c-driver mongo-c-driver-dev
 RUN MAKEFLAGS="-j8" pecl install mongodb
 RUN docker-php-ext-enable mongodb
 RUN apk del build-base php7-dev
