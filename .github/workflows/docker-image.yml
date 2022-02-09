@@ -23,7 +23,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build and push
-      run: 'docker buildx build --platform linux/arm64,linux/amd64,linux/ppc64le,linux/s390x,linux/386,linux/arm/v7,linux/arm64/v8 . -t finwo/adminer:latest -t finwo/adminer:4 -t finwo/adminer:4.8 -t finwo/adminer:4.8.1 --output=type=registry'
+      run: 'docker buildx build --platform linux/amd64,linux/arm64/v8 . -t finwo/adminer:latest -t finwo/adminer:4 -t finwo/adminer:4.8 -t finwo/adminer:4.8.1 --output=type=registry'
 
     # - name: Build and push
     #   uses: docker/build-push-action@v2
