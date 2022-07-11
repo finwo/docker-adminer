@@ -10,6 +10,12 @@ RUN echo "upload_max_filesize = 1G" >  /usr/local/etc/php/conf.d/0-upload_large_
 
 RUN apk update
 
+
+RUN echo ""                                                                                       >  /etc/apk/repositories
+RUN echo https://dl-cdn.alpinelinux.org/alpine/v$(cut -d'.' -f1,2 /etc/alpine-release)/main/      >> /etc/apk/repositories
+RUN echo https://dl-cdn.alpinelinux.org/alpine/v$(cut -d'.' -f1,2 /etc/alpine-release)/community/ >> /etc/apk/repositories
+RUN echo https://dl-cdn.alpinelinux.org/alpine/edge/testing/                                      >> /etc/apk/repositories
+
 RUN apk add build-base php7-dev mongo-c-driver mongo-c-driver-dev
 RUN MAKEFLAGS="-j8" pecl install mongodb
 RUN docker-php-ext-enable mongodb
