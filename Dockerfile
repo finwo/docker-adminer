@@ -10,7 +10,6 @@ RUN echo "upload_max_filesize = 1G" >  /usr/local/etc/php/conf.d/0-upload_large_
 
 RUN apk update
 
-
 RUN echo ""                                                                                       >  /etc/apk/repositories
 RUN echo https://dl-cdn.alpinelinux.org/alpine/v$(cut -d'.' -f1,2 /etc/alpine-release)/main/      >> /etc/apk/repositories
 RUN echo https://dl-cdn.alpinelinux.org/alpine/v$(cut -d'.' -f1,2 /etc/alpine-release)/community/ >> /etc/apk/repositories
