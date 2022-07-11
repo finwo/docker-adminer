@@ -16,7 +16,7 @@ RUN echo https://dl-cdn.alpinelinux.org/alpine/v$(cut -d'.' -f1,2 /etc/alpine-re
 RUN echo https://dl-cdn.alpinelinux.org/alpine/edge/testing/                                      >> /etc/apk/repositories
 
 RUN apk add build-base php7-dev mongo-c-driver mongo-c-driver-dev
-RUN MAKEFLAGS="-j8" pecl -d memory_limit=128M install mongodb
+RUN MAKEFLAGS="-j8" pecl install mongodb
 RUN docker-php-ext-enable mongodb
 RUN apk del build-base php7-dev
 COPY plugins-enabled/* /var/www/html/plugins-enabled
