@@ -2,11 +2,11 @@ FROM adminer:4.8.1
 
 USER root
 
-RUN echo "upload_max_filesize = 1G" >  /usr/local/etc/php/conf.d/0-upload_large_dumps.ini \
-&&  echo "post_max_size = 2G"       >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini \
-&&  echo "memory_limit = 4G"        >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini \
-&&  echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini \
-&&  echo "max_input_vars = 5000"    >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
+RUN echo "upload_max_filesize = 1G" >  /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
+RUN echo "post_max_size = 2G"       >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
+RUN echo "memory_limit = 4G"        >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
+RUN echo "max_execution_time = 600" >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
+RUN echo "max_input_vars = 5000"    >> /usr/local/etc/php/conf.d/0-upload_large_dumps.ini
 
 RUN apk update
 
