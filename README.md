@@ -95,12 +95,12 @@ the following out of the box:
 - SimpleDB
 - Elasticsearch
 - MongoDB
+- Oracle
 
 To add support for the other drivers you will need to install the following PHP
 extensions on top of this image:
 
 - `pdo_dblib` (MS SQL)
-- `oci8` (Oracle)
 - `interbase` (Firebird)
 
 # License
