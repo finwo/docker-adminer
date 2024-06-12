@@ -1,6 +1,6 @@
 # Quick Reference
 
-- Maintained By: [Robin Bron](https://github.com/finwo/docker-adminer)
+- Maintained By: [Yersa Nordman](https://github.com/finwo/docker-adminer)
 - Where to file issues: https://github.com/finwo/docker-adminer/issues
 
 # Adminer
